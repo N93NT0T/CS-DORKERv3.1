@@ -1,0 +1,10 @@
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-1 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-2 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-3 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-4 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-5 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-6 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-7 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-8 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-9 
+start cmd.exe /k php CS-Dorker_v3.1.php list.txt sites-10 
