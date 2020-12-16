@@ -1,4 +1,4 @@
-<?php error_reporting(0);salam();
+<?php error_reporting(0);salam();sleep(5);
 // TTD : N93NT0T_H4X0R A.K.A. Mr.7ev3n - INDONESIAN H4X0R LITE
 function salam(){echo"
 
@@ -18,13 +18,13 @@ function salam(){echo"
 \e[36m \:::\    \      \/____/   \:::\   \:::\   \/____/   \e[38;5;208m))/(\)   \e[93m+    \e[38;5;208m(   )/(    (    ( \e[93m+  
 \e[36m  \:::\    \                \:::\   \:::\    \      \e[38;5;208m(/(( ))\  (   )(  )\())   )\( )( (          \e[93m+
 \e[36m   \:::\    \                \:::\   \:::\____\      \e[38;5;208m) (_) (_)()/\( (()\ ((_)\  /((_)(()\             \e[93m+
-\e[36m    \:::\    \                \:::\  /:::/    /      \e[38;5;208m )|   \  (_) ((_)| |(_)(_))   ((_)                 \e[93m+
+\e[36m    \:::\    \                \:::\  /:::/    /  \e[93m +   \e[38;5;208m )|   \  (_) ((_)| |(_)(_))   ((_)                 \e[93m+
 \e[36m     \:::\    \                \:::\/:::/    /         \e[91m| |) |/ _ \| '_|| / / / -_) | '_|                     \e[93m+
-\e[36m      \:::\    \                \::::::/    /          \e[91m|___/ \___/|_|  |_\_\ \___| |_|                       \e[93m+
-\e[36m       \:::\____\                \::::/    /              \e[97m©2020 \e[93mCoded By - Mr.7ev3n                \e[93m+
+\e[36m      \:::\    \                \::::::/    /  \e[93m +       \e[91m|___/ \___/|_|  |_\_\ \___| |_|                       \e[93m+
+\e[36m       \:::\____\                \::::/    /           \e[93m +  \e[97m©2020 \e[93mCoded By - Mr.7ev3n                \e[93m+
 \e[36m        \::/    /                 \::/    /                  \e[97m~  \e[35mN93NT0T H4X0R  \e[97m~                \e[93m+
-\e[36m         \/____/                   \/____/                \e[97m~~ \e[35mINDONESIAN CYBER LITE \e[97m~~            \e[93m+
-";sleep(5);
+\e[36m         \/____/                   \/____/       \e[93m +        \e[97m~~ \e[35mINDONESIAN CYBER LITE \e[97m~~            \e[93m+
+";
 }
 function Curl ($url, $post = 0, $headers = 0, $proxy = 0){
         $ch = curl_init();
@@ -90,7 +90,7 @@ function ask($dork){
 				echo"\e[97m[\e[34mask\e[97m][\e[38;5;208mpage\e[97m:\e[92m$i\e[97m]\n";
 				$allLinks[] = $links;
 			}
-		}else{ break;}//sleep(2);
+		}else{ break;}//sleep(1);
     }
     return array_unique($allLinks);
 }
@@ -111,9 +111,9 @@ function bing($dork){
 			echo"\e[97m[\e[35mbing\e[97m][\e[38;5;208mpage\e[97m:\e[92m$i\e[97m]\n";
             $allLinks[] = $link; 
 			}
-		}else{ break;}//sleep(2);
+		}else{ break;}//sleep(1);
     }
-        return array_unique(array_map("urldecode", $allLinks));
+        return array_unique($allLinks);
 }
 function google($dork){
 $i = 0;
@@ -134,33 +134,41 @@ $i = 0;
 				echo"\e[97m[\e[36mgoogle\e[97m][\e[38;5;208mpage\e[97m:\e[92m$i\e[97m]\n";
 				$allLinks[] = urldecode(get_string($key, '&q=', '&sa'));
 			}
-		}else{break;sleep(2);}//sleep(2);
-	}
+		}else{break;sleep(2);}//sleep(2); //use this if u block google
+	}  
 return array_unique($allLinks);
 }
 
 
-
+$start  = new DateTime(date('H:i:s'));
 $dork1 = file($argv[1], FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 foreach($dork1 as $dorkr1){
 $dork2 = file("Sites/$argv[2].txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-	foreach($dork2 as $dorkr2){
+foreach($dork2 as $dorkr2){
+$c_d1 = count(file("$argv[1]"));
+$c_d2 = count(file("Sites/$argv[2].txt"));
+$c_d = $c_d1*$c_d2;$c_e++;
 $dork = "$dorkr1 site:$dorkr2";
+$user = getenv("username");
+$date = date('d/m/y');
+system("title [$date]                                                                                                                       root@$user:~# ./CS-DORKERv3.1.php -dork $dorkr1 -site $dorkr2 ");
+$first  = new DateTime(date('H:i:s'));
 $garap = ask($dork);
 $garap = bing($dork);
 $garap = google($dork);
+$second = new DateTime(date('H:i:s'));
 $done = implode("\n", array_unique(array_map("parse", $garap)));
 saved("result.txt","$done\n");
 $c = count(file("result.txt"));
-$user = getenv("username");
-$date = date('H:i:s');
+$diff = $first->diff($second);
+$elapse = $diff->format('%i,%s');
 echo "$done
 \e[93m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \e[93m+ \e[93m@author    \e[93m: \e[93mMr.7ev3n                   \e[93m+ 
-\e[93m+ \e[91m@github    \e[93m: \e[91mhttps://github.com/N93NT0T \e[93m+ \e[97m[\e[91mSite \e[97m: \e[38;5;208m$dorkr2\e[97m]
-\e[93m+ \e[92m@youtube   \e[93m: \e[92mbit.ly/n93nt0t             \e[93m+ \e[97m[ \e[34mToTaL \e[97m: \e[32m$c \e[97m]
-\e[93m+ \e[35m@twitter   \e[93m: \e[35mbit.ly/t_ng93nt0t          \e[93m+ \e[97m[ \e[92m$date \e[97m]
-\e[93m+ \e[34m@instagram \e[93m: \e[34mbit.ly/i_n93nt0t           \e[93m+ \e[97m~ \e[35mSemangat \e[93m$user \e[97m~
+\e[93m+ \e[91m@github    \e[93m: \e[91mhttps://github.com/N93NT0T \e[93m+ \e[97m[\e[38;5;208mSite \e[97m: \e[38;5;208m$dorkr2\e[97m]
+\e[93m+ \e[92m@youtube   \e[93m: \e[92mbit.ly/n93nt0t             \e[93m+ \e[97m[ \e[36mToTaL \e[97m: \e[36m$c \e[97m]
+\e[93m+ \e[35m@twitter   \e[93m: \e[35mbit.ly/t_ng93nt0t          \e[93m+ \e[97m[ \e[92m$elapse Second \e[97m]
+\e[93m+ \e[34m@instagram \e[93m: \e[34mbit.ly/i_n93nt0t           \e[93m+ \e[97m[ \e[93m$c_e\e[97m/\e[93m$c_d \e[97m]
 \e[93m+ \e[36m@facebook  \e[93m: \e[36mbit.ly/fb_n93nt0t          \e[93m+ 
 \e[93m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ";
@@ -168,6 +176,43 @@ echo "$done
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 }
-?>
+$finish  = new DateTime(date('H:i:s'));
+$diff = $start->diff($finish);
+$elapsed = $diff->format('%H:%i:%s');salam();
+echo"                              \e[92mDONE!                                                   
+\e[93m++++++++++++++++++++++++++++++++++++++++++++++      +        +               +             +            +
+\e[93m+ \e[93m@author       \e[93m: \e[93mMr.7ev3n                   \e[93m  +     +        +           +          +
+\e[93m+ \e[91m@github       \e[93m: \e[91mhttps://github.com/N93NT0T \e[93m             +        +            +      +
+\e[93m+ \e[92m@youtube      \e[93m: \e[92mbit.ly/n93nt0t             \e[93m +    +                               +
+\e[93m+ \e[35m@twitter      \e[93m: \e[35mbit.ly/t_ng93nt0t          \e[93m          +     +           +
+\e[93m+ \e[34m@instagram    \e[93m: \e[34mbit.ly/i_n93nt0t           \e[93m   +                +                   
+\e[93m+ \e[36m@facebook     \e[93m: \e[36mbit.ly/fb_n93nt0t          \e[93m              +          +
+\e[93m+ \e[32m@Result       \e[93m: \e[32m$c                         \e[93m     +      +                     +
+\e[93m+ \e[38;5;208m@Elapsed Time \e[93m: $elapsed                   \e[93m        +      +      +
+\e[93m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+";?>
