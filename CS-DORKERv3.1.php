@@ -23,7 +23,7 @@ function salam(){echo"
 \e[36m      \:::\    \                \::::::/    /  \e[93m +       \e[91m|___/ \___/|_|  |_\_\ \___| |_|                       \e[93m+
 \e[36m       \:::\____\                \::::/    /           \e[93m +  \e[97m©2020 \e[93mCoded By - Mr.7ev3n                \e[93m+
 \e[36m        \::/    /                 \::/    /                  \e[97m~  \e[35mN93NT0T H4X0R  \e[97m~                \e[93m+
-\e[36m         \/____/                   \/____/       \e[93m +        \e[97m~~ \e[35mINDONESIAN CYBER LITE \e[97m~~            \e[93m+
+\e[36m         \/____/                   \/____/       \e[93m +        \e[97m~~ \e[35mINDONESIAN H4X0R LITE \e[97m~~            \e[93m+
 ";
 }
 function Curl ($url, $post = 0, $headers = 0, $proxy = 0){
